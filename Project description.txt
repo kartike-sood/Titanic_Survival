@@ -1,0 +1,7 @@
+Project Description:
+
+This project finds whether a person would survive the sink of the biggest ship of its time, RMS Titanic, by analyzing the data of its passengers and their features(namely Age, Sex, Fare, Classes in the ship and some more). 
+
+>>>
+I know that the training dataset(data of the passengers to be analyzed) is fairly small, but still worth a try!
+I have used two algorithms, K-Neighbors Classifier and Logistic Regression, the one which performs better has been used for main collections.
