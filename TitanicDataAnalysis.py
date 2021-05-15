@@ -1,5 +1,6 @@
 import pandas as pd
 
+from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import f1_score
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
@@ -59,8 +60,9 @@ y = titanic_data["Survived"]
 
 
 x_train, x_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 42)
-
-
+# scaling
+x_train = StandardScaler().fit_transform(x_train)
+x_test = StandardScaler().fit_transform(x_test)
 
 clf_log = LogisticRegression(max_iter = 1000)
 clf_log.fit(x_train, y_train)
